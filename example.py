@@ -8,7 +8,7 @@ import nnsc
 def main():
     V = np.array([[1, 1, 1, 1, 1], [0, 1, 0, 1, 0], [0, 1, 0, 1, 0]])
     r = 2
-    W, H = NNSC(V, r, lamb=0, maxit=2000)
+    W, H = nnsc.NNSC(V, r, lamb=0, maxit=2000)
     Ve = np.dot(W, H)
     np.set_printoptions(precision=2, suppress=True)
     print 'W x H ~ V'

@@ -3,7 +3,7 @@
 import numpy as np
 
 
-def NNSC(X, r, lamb=0.2, maxit=500):
+def NMF(X, r, lamb=0.2, maxit=500):
     if not((r < X.shape[0]) | (r < X.shape[1])):
         raise ValueError('Erro: Valor de r')
     H = np.random.rand(r, X.shape[1])

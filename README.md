@@ -1,4 +1,4 @@
 nnsc
 ====
 
-Non Negative Sparse Coding
+Non-Negative Matrix factorization (NMF) algorithm.

@@ -11,15 +11,11 @@ def main():
     W, H = nmf.NMF(V, r, lamb=0, maxit=2000)
     Ve = np.dot(W, H)
     np.set_printoptions(precision=2, suppress=True)
-    print 'W x H ~ V'
-    # print W
-    # print H
 
     for i in range(r):
         Hi = np.zeros((r, np.shape(H)[1]))
         Hi[i, :] = H[i, :]
         TMP = np.dot(W, Hi)
-        print TMP
         pl.imsave("V"+str(i)+".png", TMP, cmap=pl.cm.gray)
 
     pl.imsave("V.png", V, cmap=pl.cm.gray)
